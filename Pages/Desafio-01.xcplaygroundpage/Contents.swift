@@ -1,7 +1,18 @@
-//: [Previous](@previous)
+class Empregado {
+    var nome: String
+    var salario: Double
+    
+    init(nome: String, salario: Double) {
+        self.nome = nome
+        self.salario = salario
+    }
+}
 
-import Foundation
-
-var greeting = "Hello, playground"
-
-//: [Next](@next)
+class Gerente: Empregado {
+    var departamento: String
+    
+    init(nome: String, salario: Double, departamento: String) {
+        self.departamento = departamento
+        super.init(nome: nome, salario: salario)
+    }
+}
